@@ -3,11 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SyncHockey - Coaching and Analytics Platform</title>
+  <title>SyncHockey - Real-Time Insights, Synchronized Success</title>
+  <meta name="description" content="Track and analyze hockey games with SyncHockey. Elevate your team's performance with detailed game recaps and real-time stats.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      h1, h2, h5 {
+        font-family: 'Bebas Neue', cursive;
+      }
+      p {
+        font-family: 'Roboto', sans-serif;
+      }
+      .bg-hockey {
+        background-image: url('path-to-your-hockey-rink-image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+      }
+      .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
 <body>
 
 <!-- Navbar -->
@@ -25,9 +46,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#analytics">Analytics</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#pricing">Pricing</a>
-        </li>
         <li class="nav-item" style="display: none;">
           <a class="nav-link" href="about-me.html">About Me</a>
         </li>
@@ -43,42 +61,42 @@
 <section class="bg-dark text-light text-center py-5">
   <div class="container">
     <h1 class="display-4">SyncHockey</h1>
-    <p class="lead">Stay in Sync, Even Away from the Rink.</p>
+    <p class="lead">Real-Time Insights, Synchronized Success</p>
     <a href="https://gameday2.netlify.app/demo" target="_blank" class="btn btn-primary btn-lg">Try the Demo</a>
   </div>
 </section>
 
 <!-- Features Section -->
-<section id="features" class="py-5">
+<section id="features" class="bg-hockey py-5">
   <div class="container">
     <div class="row text-center mb-4">
       <div class="col">
-        <h2>Key Features</h2>
-        <p class="lead">Empowering coaches and players with comprehensive insights for better performance.</p>
+        <h2 class="text-light">Key Features</h2>
+        <p class="lead text-light">Empowering coaches and players with real-time insights for better performance.</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-file-earmark-text"></i> Scouting Reports</h5>
-            <p class="card-text">In-depth analysis of opponents featuring player stats and insights.</p>
+            <h5 class="card-title"><i class="bi bi-stopwatch"></i> Live Game Tracking</h5>
+            <p class="card-text">Log shots, goals, and face-offs in real time, right from your device.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-journal-text"></i> Game Recaps</h5>
-            <p class="card-text">Detailed breakdown of games with analysis and key takeaways.</p>
+            <h5 class="card-title"><i class="bi bi-graph-up"></i> Game Recaps</h5>
+            <p class="card-text">Get detailed breakdowns with visual analytics post-game to understand performance.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-graph-up-arrow"></i> Performance Analytics</h5>
-            <p class="card-text">Track team metrics and gain insights through advanced analytics.</p>
+            <h5 class="card-title"><i class="bi bi-binoculars"></i> Scouting Reports</h5>
+            <p class="card-text">Add detailed notes on opponents to enhance game strategy, complementing live tracking with pre-game insights.</p>
           </div>
         </div>
       </div>
@@ -86,37 +104,37 @@
   </div>
 </section>
 
-<!-- Highlights Section -->
-<section id="highlights" class="py-5 bg-light">
+<!-- Analytics Section -->
+<section id="analytics" class="py-5 bg-light">
   <div class="container">
     <div class="row text-center mb-4">
       <div class="col">
-        <h2>Feature Highlights</h2>
-        <p class="lead">Key elements enhancing your coaching and playing experience.</p>
+        <h2>Analytics</h2>
+        <p class="lead">Turn data into strategy with our advanced analytics tools.</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-film"></i> Video Analysis</h5>
-            <p class="card-text">Review game footage and key moments to enhance player performance.</p>
-          </div>
-        </div>
-      </div>
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title"><i class="bi bi-map"></i> Shot Maps</h5>
-            <p class="card-text">Visualize shot distribution and effectiveness for strategic insights.</p>
+            <p class="card-text">Visualize where shots are taken to refine strategies.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-person-lines-fill"></i> Lineups</h5>
-            <p class="card-text">Analyze team lineups and stratgies for optimal game planning.</p>
+            <h5 class="card-title"><i class="bi bi-fire"></i> Heat Maps</h5>
+            <p class="card-text">Identify high-activity zones on the rink for tactical analysis.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-bar-chart"></i> Player Stats</h5>
+            <p class="card-text">Track individual performance metrics for player development.</p>
           </div>
         </div>
       </div>
@@ -124,44 +142,26 @@
   </div>
 </section>
 
-
-
-<!-- Pricing Section -->
-<section id="pricing" class="bg-light py-5">
+<!-- Contact Section -->
+<section id="contact" class="py-5">
   <div class="container">
     <div class="row text-center mb-4">
       <div class="col">
-        <h2>Pricing</h2>
-        <p class="lead">Affordable plans for every level of competition.</p>
+        <h2>Get in Touch</h2>
+        <p class="lead">Have questions or interested in learning more? Contact us!</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Basic Plan</h5>
-            <p class="card-text">Ideal for teams needing scouting and game reports.</p>
-            <a href="#" class="btn btn-primary">Sign Up</a>
+      <div class="col-md-6 offset-md-3">
+        <form>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Pro Plan</h5>
-            <p class="card-text">Includes full analytics suite and multi-team support.</p>
-            <a href="#" class="btn btn-primary">Sign Up</a>
+          <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message"></textarea>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Enterprise Plan</h5>
-            <p class="card-text">Custom solutions for organizations and leagues.</p>
-            <a href="#" class="btn btn-primary">Contact Us</a>
-          </div>
-        </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
       </div>
     </div>
   </div>
@@ -170,14 +170,11 @@
 <!-- Footer -->
 <footer class="bg-dark text-light py-4">
   <div class="container text-center">
-    <p>&copy; 2024 SyncHockey. All Rights Reserved.</p>
+    <p>© 2025 SyncHockey. All Rights Reserved.</p>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -195,3 +192,5 @@
   gtag('js', new Date());
   gtag('config', 'YOUR_TRACKING_ID');
 </script>
+</body>
+</html>
