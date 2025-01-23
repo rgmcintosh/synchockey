@@ -153,7 +153,8 @@
     </div>
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <form action="https://rgmcintosh.com/form-handler.php" method="POST">
+        <form action="https://formspree.io/f/xkgononp" method="POST">
+          <input type="hidden" name="_next" value="window.location.href" />
           <div class="mb-3">
               <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Your Email" required>
           </div>
@@ -161,7 +162,7 @@
               <textarea class="form-control" name="message" id="message" rows="3" placeholder="Your Message" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send</button>
-      </form>
+        </form>
       </div>
     </div>
   </div>
@@ -186,19 +187,14 @@
   });
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N3RMJ45P1M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'YOUR_TRACKING_ID');
 
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const mailtoLink = `mailto:rob@rgmcintosh.com?subject=Message from Website&body=Email: ${email}%0D%0A%0D%0AMessage: ${message}`;
-    window.location.href = mailtoLink;
-  });
+  gtag('config', 'G-N3RMJ45P1M');
 </script>
 </body>
 </html>
