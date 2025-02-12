@@ -63,7 +63,7 @@ p {
 }
 
 .cta-button {
-  background-color: #056bc4; /* Vibrant blue */
+  background-color: #42a5f5;
   color: #fff;
   border: none;
   padding: 12px 24px;
@@ -173,11 +173,17 @@ footer p {
         <li class="nav-item">
           <a class="nav-link" href="#analytics">Analytics</a>
         </li>
-        <li class="nav-item" style="display: none;">
-          <a class="nav-link" href="about-me.html">About Me</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+            <li><a class="dropdown-item" href="https://gameday2.netlify.app/login">Login</a></li>
+            <li><a class="dropdown-item" href="https://gameday2.netlify.app/register">Register</a></li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -190,6 +196,10 @@ footer p {
       <h1 class="display-4 animate-fadeInUp">SyncHKY</h1>
       <p class="lead animate-fadeInUp">Real-Time Insights, Synchronized Success</p>
       <a href="https://gameday2.netlify.app/demo" target="_blank" class="cta-button btn btn-lg text-light">Try the Demo</a>
+      <div class="mt-3">
+        <a href="https://gameday2.netlify.app/login" class="cta-button btn btn-lg text-light me-2">Login</a>
+        <a href="https://gameday2.netlify.app/register" class="cta-button btn btn-lg text-light">Register</a>
+      </div>
     </div>
   </section>
 
@@ -310,6 +320,8 @@ footer p {
 <!-- Footer -->
 <footer class="py-4">
   <div class="container text-center">
+    <a href="https://gameday2.netlify.app/login" class="btn btn-outline-light me-2 mb-2">Login</a>
+    <a href="https://gameday2.netlify.app/register" class="btn btn-outline-light mb-2">Register</a>
     <p>© 2025 SyncHKY. All Rights Reserved.</p>
   </div>
 </footer>
