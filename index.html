@@ -3,157 +3,217 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncHKY - Analytics App for Real-Time Insights and Strategy</title>
+    <title>SyncHKY - In Sync for Success</title>
     <meta name="description" content="Discover SyncHKY, the ultimate tool for tracking hockey stats, analyzing player performance, and winning games with real-time data. Elevate your team's strategy with our intuitive features.">
     <meta name="keywords" content="hockey analytics, game tracking, coaching tools, player stats, real-time hockey data, hockey strategy, shot maps, heat maps, SyncSports">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
       body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f1f9ff; /* Light blue for a clean, icy look */
-}
+        font-family: 'Roboto', sans-serif;
+        background-color: #f9fafb; /* Cleaner, neutral backdrop */
+        color: #1f2a44; /* Slightly softer dark tone */
+        line-height: 1.6; /* Better readability */
+      }
+    
+      h1, h2, h5 {
+        font-family: 'Poppins', sans-serif;
+        color: #034078; /* Keep the rich blue */
+      }
+    
+      p {
+        font-family: 'Roboto', sans-serif;
+        color: #1f2a44;
+      }
+    
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        padding: 120px 0; /* More vertical breathing room */
+        text-align: center;
+      }
+    
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), /* Vertical gradient for depth */
+          url('images/goal_2.png');
+        filter: grayscale(30%); /* Softer, less stark */
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+    
+      .hero-section .display-4 {
+        color: #ffffff;
+        font-size: 3.2rem; /* Slightly smaller, sharper */
+        font-weight: 600;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        margin-bottom: 10px;
+      }
+    
+      .hero-section .lead {
+        color: #ffffff; /* Pure white for clarity */
+        font-size: 1.3rem; /* Less bulky */
+        font-weight: 400;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        margin-bottom: 20px;
+      }
+    
+      .hero-section .text-muted {
+        color: #b3d4ff; /* Light blue hint */
+        font-size: 0.9rem;
+      }
 
-h1, h2, h5 {
-  font-family: 'Poppins', sans-serif;
-  color: #056bc4; /* Blue for headers */
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
-  color: #333; /* Dark grey text for readability */
-}
-
-.hero-section {
-  position: relative; /* Allows absolute positioning of pseudo-element */
-  background-size: cover;
-  background-position: center;
-  color: #fff; /* Ensure all text in hero section is white by default */
-  padding: 100px 0; /* More padding for breathing room */
-}
-
-/* Pseudo-element for background with grayscale filter */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('images/goal_2.png');
-  filter: grayscale(100%);
-  background-size: cover;
-  background-position: center;
-  z-index: -1; /* Place the pseudo-element behind the content */
-}
-
-/* Ensure content isn't affected by the grayscale */
-.hero-section > * {
-  position: relative;
-  z-index: 1; /* Above the grayscale background */
-}
-
-/* Explicitly set header and lead text to white with shadow for contrast */
-.hero-section .display-4, .hero-section .lead {
-  color: #fff; /* White text for headers and lead */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better contrast against busy background */
-}
-
-.cta-button {
-  background-color: #42a5f5;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1.1em;
-  font-weight: bold;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button:hover {
-  background-color: #0459a7; /* Darker blue for hover effect */
-  transform: translateY(-3px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.bg-hockey {
-  background-image: url('images/faceoff.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-}
-
-.feature-section, #contact {
-  background-color: #e1f5fe; /* Light blue for sections */
-}
-
-.card {
-  border-radius: 15px;
-  background-color: #fff; /* White cards for contrast */
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-#analytics {
-  background-color: #e0f7fa; /* Light teal for analytics */
-}
-
-/* Navbar */
-.navbar-light {
-  background-color: #e1f5fe; /* Light blue navbar */
-}
-
-.navbar-light .navbar-brand, .navbar-light .nav-link {
-  color: #056bc4; /* Blue text for nav items */
-}
-
-.navbar-light .nav-link:hover {
-  color: #009688; /* Teal on hover for nav links */
-}
-
-/* Footer */
-footer {
-  background-color: #056bc4;
-}
-
-footer p {
-  color: #e1f5fe; /* Light text for contrast */
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 1s ease-out;
-}
-
-@media (max-width: 767px) {
-  .bg-hockey {
-    background-attachment: scroll;
-    background-position: top center;
-  }
-}
+      .hero-section .text-info {
+        color: #cce5ff; /* Brighter blue */
+        font-size: 0.9rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Contrast boost */
+      }
+    
+      /* Buttons */
+      .cta-button {
+        background-color: #1e88e5;
+        color: #ffffff;
+        border: none;
+        padding: 12px 24px; /* Slimmer */
+        font-size: 1rem; /* Less shouty */
+        font-weight: 600;
+        border-radius: 30px; /* Softer curve */
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      }
+    
+      .cta-button:hover {
+        background-color: #1565c0;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+      }
+    
+      .btn-outline-light {
+        border-color: #ffffff;
+        color: #ffffff;
+        padding: 8px 16px; /* Smaller */
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+    
+      .btn-outline-light:hover {
+        background-color: #ffffff;
+        color: #034078;
+      }
+    
+      /* Sections */
+      .bg-hockey {
+        background: 
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('images/faceoff.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 60px 0; /* More spacing */
+      }
+    
+      .feature-section, #contact, #tracking-service, #pricing-teaser {
+        background-color: #f1f5f9;
+        padding: 60px 0; /* Consistent, airy padding */
+      }
+    
+      /* Cards */
+      .card {
+        border: none;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        padding: 20px; /* Inner breathing room */
+      }
+    
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      }
+    
+      .card-title {
+        color: #034078;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+    
+      .card-text {
+        font-size: 0.95rem;
+      }
+    
+      /* Navbar */
+      .navbar-light {
+        background-color: #ffffff;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05); /* Subtler shadow */
+        padding: 15px 0;
+      }
+    
+      .navbar-light .navbar-brand, .navbar-light .nav-link {
+        color: #034078;
+        font-weight: 500;
+      }
+    
+      .navbar-light .nav-link:hover {
+        color: #1e88e5;
+      }
+    
+      /* Footer */
+      footer {
+        background-color: #034078;
+        padding: 30px 0; /* Less cramped */
+      }
+    
+      footer p {
+        color: #e6f0ff;
+        margin: 10px 0 0;
+      }
+    
+      /* Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(15px); /* Smaller jump */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .animate-fadeInUp {
+        animation: fadeInUp 0.8s ease-out; /* Faster, smoother */
+      }
+    
+      @media (max-width: 767px) {
+        .bg-hockey {
+          background-attachment: scroll;
+          background-position: top center;
+        }
+        .hero-section {
+          padding: 100px 0; /* Less extreme on mobile */
+        }
+        .hero-section .display-4 {
+          font-size: 2.2rem;
+        }
+        .hero-section .lead {
+          font-size: 1.1rem;
+        }
+        .cta-button {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+      }
     </style>
   </head>
 <body>
@@ -168,13 +228,13 @@ footer p {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#features">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#analytics">Analytics</a>
+          <a class="nav-link" href="#what-you-get">Features</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#tracking-service">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing-teaser">Pricing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
@@ -193,112 +253,67 @@ footer p {
   </div>
 </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section text-center py-5">
-    <div class="container">
-      <h1 class="display-4 animate-fadeInUp">SyncHKY</h1>
-      <p class="lead animate-fadeInUp">Real-Time Insights, Synchronized Success</p>
-      <a href="https://app.synchky.com/demo" target="_blank" class="cta-button btn btn-lg text-light">Try the Demo</a>
-      <div class="mt-3">
-        <a href="https://app.synchky.com/login" class="cta-button btn btn-lg text-light me-2">Login</a>
-        <a href="https://app.synchky.com/register" class="cta-button btn btn-lg text-light">Register</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Section -->
-  <section class="why-section py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="display-5 animate-fadeInUp">Why SyncHKY?</h2>
-          <p class="lead animate-fadeInUp">I created SyncHKY to empower coaches and players with real-time hockey analytics for strategic decision-making. Whether you're at the rink or on the go, access crucial game insights without adding extra time to your day.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- Features Section -->
-<section id="features" class="bg-hockey py-5">
+<!-- Hero Section -->
+<section class="hero-section">
   <div class="container">
-    <div class="row text-center mb-4">
-      <div class="col">
-        <h2 class="text-light">Key Features</h2>
-        <p class="lead text-light">Empowering coaches and players with real-time insights for better performance.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-stopwatch"></i> Live Game Tracking</h5>
-            <p class="card-text">Log shots, goals, and face-offs in real time, right from your device.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-graph-up"></i> Game Recaps</h5>
-            <p class="card-text">Get detailed breakdowns with visual analytics post-game to understand performance.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-binoculars"></i> Scouting Reports</h5>
-            <p class="card-text">Add detailed notes on opponents to enhance game strategy, complementing live tracking with pre-game insights.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1 class="display-4 animate-fadeInUp">SyncHKY</h1>
+    <p class="lead animate-fadeInUp">In Sync for Success</p>
+    <a href="https://app.synchky.com/demo" target="_blank" class="cta-button btn btn-lg animate-fadeInUp">Try the Demo</a>
   </div>
 </section>
 
+<!-- Why Section -->
+<section class="why-section py-5">
+  <div class="container text-center">
+    <h2 class="display-5 animate-fadeInUp">Why SyncHKY?</h2>
+    <p class="lead animate-fadeInUp">I created SyncHKY to give coaches and players the insights that drive wins. Track your stats live or after the game—anywhere, effortlessly.</p>
+  </div>
+</section>
+
+<!-- Tracking Service Section -->
 <section id="tracking-service" class="py-5 bg-light">
   <div class="container">
     <div class="row text-center">
       <div class="col">
-        <h2>Data Tracking Service</h2>
-        <p class="lead">Don't have the time to track? Let me do it for you.</p>
-        <p>I can track your games if you provide a stream or recording, ensuring you get all the data you need without the hassle.</p>
-        <a href="#contact" class="cta-button btn btn-lg text-light">Contact Me</a>
+        <h2 class="animate-fadeInUp">Data Tracking Service</h2>
+        <p class="lead animate-fadeInUp">Gear Up for Your Next Season</p>
+        <p class="animate-fadeInUp">Try the app free now—track stats yourself. Want games tracked for you? Join the waitlist for this year’s seasons!</p>
+        <a href="#contact" class="cta-button btn btn-lg text-light animate-fadeInUp">Join the Waitlist</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Analytics Section -->
-<section id="analytics" class="py-5 bg-light">
+<!-- What You Get Section -->
+<section id="what-you-get" class="bg-hockey py-5">
   <div class="container">
-    <div class="row text-center mb-4">
+    <div class="row text-center mb-5">
       <div class="col">
-        <h2>Analytics</h2>
-        <p class="lead">Turn data into strategy with our advanced hockey analytics tools.</p>
+        <h2 class="text-light animate-fadeInUp">What You Get</h2>
+        <p class="lead text-light animate-fadeInUp">Smart tools to dominate the ice—track games and scout opponents.</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card h-100">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 animate-fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-stopwatch"></i> Game Stats</h5>
+            <p class="card-text">Shot & goal locations, faceoff percentages, plus/minus—live and ready.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 animate-fadeInUp">
           <div class="card-body">
             <h5 class="card-title"><i class="bi bi-map"></i> Shot Maps</h5>
-            <p class="card-text">Visualize where shots are taken to refine strategies.</p>
+            <p class="card-text">Visualize shots to sharpen your game.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 animate-fadeInUp">
           <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-circle"></i> Faceoff Zones</h5>
-            <p class="card-text">Track faceoff wins by location on the ice.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title"><i class="bi bi-person"></i> Player Profiles</h5>
+            <h5 class="card-title"><i class="bi bi-person"></i> Player Insights</h5>
             <p class="card-text">Explore individual stats and game logs for player development.</p>
           </div>
         </div>
@@ -307,14 +322,29 @@ footer p {
   </div>
 </section>
 
-<!-- Used By Section -->
+<!-- Used By Section 
 <section id="trusted-by" class="py-5">
   <div class="container text-center">
-    <h2>Trusted By</h2>
-    <p>SyncHKY is already enhancing the strategy of:</p>
-    <div class="row justify-content-center">
+    <h2 class="animate-fadeInUp">Trusted By</h2>
+    <p class="animate-fadeInUp">Teams already winning with SyncHKY:</p>
+    <div class="row justify-content-center mt-3">
       <div class="col-auto">
-        <img src="images/FT.png" alt="Team Logo" class="img-fluid" style="max-height: 100px;">
+        <img src="images/FT2.png" alt="Team Logo" class="img-fluid" style="max-height: 80px;">
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <h2 class="animate-fadeInUp">Pricing</h2>
+        <p class="lead animate-fadeInUp">Free to Use Now, Premium Tracking Later This Year</p>
+        <p class="animate-fadeInUp">Use SyncHKY free today—track unlimited games yourself. Premium tracking (we do the work) starts later this year at $39/month. Join now for early perks!</p>
+        <a href="https://app.synchky.com/register" class="cta-button btn btn-lg text-light animate-fadeInUp">Get Started Free</a>
       </div>
     </div>
   </div>
@@ -322,24 +352,23 @@ footer p {
 
 <!-- Contact Section -->
 <section id="contact" class="py-5">
-  <div class="container">
-    <div class="row text-center mb-4">
-      <div class="col">
-        <h2>Get in Touch</h2>
-        <p class="lead">Have questions or interested in learning more? Contact me!</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <form action="https://formspree.io/f/xkgononp" method="POST">
+  <div class="container text-center">
+    <h2 class="animate-fadeInUp">Want Your Games Tracked?</h2>
+    <p class="lead animate-fadeInUp">Start free now—sign up for premium tracking!</p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form action="https://formspree.io/f/xkgononp" method="POST" class="animate-fadeInUp">
           <input type="hidden" name="_next" value="window.location.href" />
           <div class="mb-3">
-              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Your Email" required>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
           </div>
           <div class="mb-3">
-              <textarea class="form-control" name="message" id="message" rows="3" placeholder="Your Message" required></textarea>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
           </div>
-          <button type="submit" class="btn btn-primary">Send</button>
+          <div class="mb-3">
+            <input type="text" class="form-control" name="team" id="team" placeholder="Team Name" required>
+          </div>
+          <button type="submit" class="cta-button btn btn-lg">Submit</button>
         </form>
       </div>
     </div>
@@ -349,29 +378,25 @@ footer p {
 <!-- Footer -->
 <footer class="py-4">
   <div class="container text-center">
-    <a href="https://app.synchky.com/login" class="btn btn-outline-light me-2 mb-2">Login</a>
-    <a href="https://app.synchky.com/register" class="btn btn-outline-light mb-2">Register</a>
+    <a href="https://app.synchky.com/register" class="btn btn-outline-light me-2 mb-2">Start Free</a>
+    <a href="https://app.synchky.com/login" class="btn btn-outline-light mb-2">Login</a>
     <p>© 2025 SyncHKY. All Rights Reserved.</p>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-      // JavaScript for scroll-triggered animations
-      document.addEventListener('DOMContentLoaded', function() {
-      let observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fadeInUp');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
+  document.addEventListener('DOMContentLoaded', function() {
+    let observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fadeInUp');
+          observer.unobserve(entry.target);
+        }
       });
-
-      document.querySelectorAll('.animate-fadeInUp:not(.display-4)').forEach(el => observer.observe(el));
-    });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-fadeInUp').forEach(el => observer.observe(el));
+  });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
